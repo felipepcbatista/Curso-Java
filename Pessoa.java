@@ -18,14 +18,16 @@ public class Pessoa {
         this.idade = idade;
     }
 
+    // Imprime atributos
     public void apresentar() {
         System.out.println("Ola, meu nome e " + nome + " e tenho " + idade + " anos.");
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        List<Pessoa> pessoas = new ArrayList<>();
+        Scanner sc = new Scanner(System.in); // Inicializa Scanner
+        List<Pessoa> pessoas = new ArrayList<>(); // Inicializa ArrayList de objetos Pessoa
 
+        // Instancia 3 objetos Pessoa e armazena no ArrayList
         for (int i = 0; i < 3; i++) {
             System.out.println("PESSOA " + (i + 1) + ":");
 
@@ -42,7 +44,7 @@ public class Pessoa {
             pessoas.add(new Pessoa(nome, idade));
         }
 
-        sc.close();
+        sc.close(); // Fecha Scanner
 
         // Imprime pessoas registradas
         for (Pessoa p : pessoas) {
