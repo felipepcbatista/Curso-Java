@@ -2,11 +2,9 @@ import java.util.Scanner;
 
 public class ContaBancaria {
     public String titular;
-    private String numero;
     private double saldo;
 
-    public ContaBancaria(String numero, String titular) {
-        this.numero = numero;
+    public ContaBancaria(String titular) {
         this.titular = titular;
         saldo = 0.0;
     }
@@ -41,10 +39,7 @@ public class ContaBancaria {
         System.out.print("Titular: ");
         String titular = sc.nextLine();
 
-        System.out.print("Numero: ");
-        String numero = sc.nextLine();
-
-        ContaBancaria conta = new ContaBancaria(numero, titular);
+        ContaBancaria conta = new ContaBancaria(titular);
 
         int opc;
         do {
@@ -78,5 +73,7 @@ public class ContaBancaria {
                     System.out.println("Opcao invalida");
             }
         } while (opc != 4);
+
+        sc.close();
     }
 }
